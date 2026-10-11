@@ -3,8 +3,8 @@ const CONFIG = {
   csv: 'catalogo.csv',
   // Contacto: deja vacío ('') para ocultar el botón. Ejemplos:
   //   'https://wa.me/56XXXXXXXXX'   o   'mailto:tu-correo@ejemplo.cl'
-  contactoUrl: '',
-  contactoTexto: 'Contactar',
+  contactoUrl: 'https://wa.me/56956592453',
+  contactoTexto: 'Consultar por WhatsApp',
   // Mensaje que se agrega al consultar por una carta (solo para enlaces wa.me / mailto)
   contactoMensaje: 'Hola, me interesa la carta: ',
   miniaturas: 'fotos/thumbs/', // carpeta de miniaturas (scripts/miniaturas.py)
