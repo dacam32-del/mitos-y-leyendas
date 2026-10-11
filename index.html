@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitos y Leyendas — Tienda de David Eduardo</title>
+<meta name="description" content="Cartas de Mitos y Leyendas (TCG chileno) a la venta, con precios de referencia del mercado chileno en CLP.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="sello" aria-hidden="true">⚔</div>
+    <div>
+      <h1>Mitos y Leyendas</h1>
+      <p class="sub">Tienda de David Eduardo · cartas del TCG chileno con precios del mercado chileno (CLP)</p>
+    </div>
+    <a id="contacto" class="btn-contacto" href="#" hidden>Contactar</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><span id="st-cartas">—</span><small>Cartas</small></div>
+    <div class="stat"><span id="st-filtradas">—</span><small>Resultados</small></div>
+    <div class="stat"><span id="st-valor">—</span><small>Valor filtrado</small></div>
+  </div>
+</header>
+
+<section class="controls" aria-label="Búsqueda y filtros">
+  <input id="q" type="search" placeholder="Buscar por nombre, habilidad o notas…" aria-label="Buscar">
+  <select id="orden" aria-label="Ordenar">
+    <option value="precio-desc">Precio: mayor a menor</option>
+    <option value="precio-asc">Precio: menor a mayor</option>
+    <option value="nombre-asc">Nombre A–Z</option>
+    <option value="nombre-desc">Nombre Z–A</option>
+    <option value="anio-desc">Año: más nuevo</option>
+    <option value="anio-asc">Año: más antiguo</option>
+  </select>
+  <button id="toggle-filtros" class="btn-sec" type="button" aria-expanded="false">Filtros</button>
+</section>
+<section id="filtros" class="filtros" hidden>
+  <label>Edición<select data-campo="edicionBase"></select></label>
+  <label>Era / formato<select data-campo="era"></select></label>
+  <label>Año<select data-campo="anio"></select></label>
+  <label>Tipo<select data-campo="tipo"></select></label>
+  <label>Raza<select data-campo="raza"></select></label>
+  <label>Estrategia<select data-campo="estrategia"></select></label>
+  <label>Rareza<select data-campo="rarezaBase"></select></label>
+  <label>Acabado<select data-campo="acabado"></select></label>
+  <label>Precio mín. (CLP)<input id="pmin" type="number" min="0" step="100" placeholder="0"></label>
+  <label>Precio máx. (CLP)<input id="pmax" type="number" min="0" step="100" placeholder="sin límite"></label>
+  <button id="limpiar" class="btn-sec" type="button">Limpiar filtros</button>
+</section>
+
+<main>
+  <p id="estado" class="estado">Cargando catálogo…</p>
+  <div id="grid" class="grid"></div>
+</main>
+
+<dialog id="detalle">
+  <button class="cerrar" type="button" aria-label="Cerrar">×</button>
+  <div id="detalle-cuerpo"></div>
+</dialog>
+
+<footer>
+  Precios de referencia del mercado chileno, tasados según <span id="fecha-tasacion">—</span>.
+  Los precios marcados como <em>estimados</em> no tienen una referencia publicada.
+  · <a href="catalogo.csv">Descargar catálogo (CSV)</a>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

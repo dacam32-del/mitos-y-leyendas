@@ -1,0 +1,72 @@
+[hidden]{display:none!important}
+:root{
+  --bg:#140f0c; --panel:#211913; --panel2:#2a2019; --line:rgba(255,235,200,.10);
+  --txt:#f1e9dc; --mut:#b4a690; --oro:#e8b04a; --oro2:#f6d77a; --rojo:#9e2b1f; --rojo2:#c4432f;
+  --verde:#7ed9a0; --azul:#86b8ff; --radio:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#3a1d14 0,var(--bg) 60%) fixed,var(--bg);color:var(--txt);
+  font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.4}
+a{color:var(--oro2)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
+.hero{padding:28px 20px 22px;border-bottom:3px solid var(--oro);background:linear-gradient(135deg,rgba(158,43,31,.55),rgba(20,15,12,.2) 60%)}
+.hero-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.sello{width:58px;height:58px;flex:0 0 58px;border-radius:50%;display:grid;place-items:center;font-size:28px;color:var(--bg);
+  background:radial-gradient(circle at 35% 30%,var(--oro2),var(--oro) 60%,#8a5d17);box-shadow:0 0 0 3px #5a3a10,0 6px 18px rgba(0,0,0,.5)}
+.hero h1{margin:0;font-size:clamp(1.6rem,4.5vw,2.5rem);color:var(--oro2);letter-spacing:.5px;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.sub{margin:4px 0 0;color:var(--mut)}
+.btn-contacto{margin-left:auto;background:var(--oro);color:#1b120a;font-weight:700;text-decoration:none;padding:10px 18px;border-radius:999px}
+.btn-contacto:hover{background:var(--oro2)}
+.stats{max-width:1200px;margin:18px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}
+.stat span{display:block;font-size:clamp(1.05rem,3.4vw,1.6rem);font-weight:800;color:var(--oro2)}
+.stat small{color:var(--mut);text-transform:uppercase;font-size:.7rem;letter-spacing:.8px}
+.controls{max-width:1200px;margin:18px auto 0;padding:0 20px;display:flex;gap:10px;flex-wrap:wrap}
+input,select,button{font:inherit;color:var(--txt)}
+.controls input,.controls select,.filtros select,.filtros input{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;outline:none}
+.controls input{flex:1 1 260px}
+input:focus,select:focus{border-color:var(--oro)}
+.btn-sec{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 16px;cursor:pointer}
+.btn-sec:hover{border-color:var(--oro)}
+.filtros{max-width:1200px;margin:12px auto 0;padding:14px 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;align-items:end}
+.filtros label{display:flex;flex-direction:column;gap:4px;font-size:.78rem;color:var(--mut)}
+.filtros select,.filtros input{width:100%}
+main{max-width:1200px;margin:18px auto 40px;padding:0 20px}
+.estado{color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;
+  transition:transform .15s,box-shadow .15s,border-color .15s}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:rgba(232,176,74,.5);box-shadow:0 10px 26px rgba(0,0,0,.45);outline:none}
+.card-img{position:relative;aspect-ratio:5/6;background:linear-gradient(160deg,#2f241b,#18110d);display:flex;align-items:center;justify-content:center;padding:12px}
+.card-img img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 6px 14px rgba(0,0,0,.5)}
+.card-img .noimg{color:var(--mut)}
+.badge{position:absolute;top:10px;left:10px;font-size:.7rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.badge.foil{background:linear-gradient(90deg,#ff9bd2,#ffe48a,#8cf0ff,#c7a6ff);color:#1b120a}
+.badge.normal{background:#3b2f25;color:var(--mut);border:1px solid var(--line)}
+.cant{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.65);color:var(--txt);font-size:.75rem;font-weight:700;padding:3px 8px;border-radius:999px}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card h2{margin:0;font-size:1.07rem;color:var(--oro2)}
+.ed{margin:0;color:var(--mut);font-size:.8rem}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:.7rem;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--txt)}
+.tag.rareza{color:var(--oro2)}
+.tag.estado{color:var(--verde)}
+.estr{font-size:.8rem;color:var(--mut);margin:0}
+.precio{margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.precio strong{font-size:1.2rem;color:var(--oro2)}
+.precio small{color:var(--mut);font-size:.72rem}
+.precio .est{color:#ffb38a}
+dialog{max-width:900px;width:calc(100% - 24px);background:var(--panel);color:var(--txt);border:1px solid rgba(232,176,74,.4);border-radius:16px;padding:0}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.cerrar{position:absolute;top:8px;right:12px;background:none;border:0;color:var(--txt);font-size:1.8rem;cursor:pointer}
+.det{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:20px;padding:22px}
+.det img{width:100%;border-radius:10px}
+.det h2{margin:0 0 4px;color:var(--oro2)}
+.det dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.9rem;margin:10px 0}
+.det dt{color:var(--mut)} .det dd{margin:0}
+.det h3{margin:14px 0 4px;font-size:1rem;color:var(--oro)}
+.det p{margin:0;white-space:pre-line}
+.det .fuentes{font-size:.85rem;word-break:break-word}
+.aviso{background:rgba(255,140,90,.12);border:1px solid rgba(255,140,90,.4);border-radius:10px;padding:8px 10px;font-size:.85rem;margin-top:8px}
+footer{max-width:1200px;margin:0 auto;padding:20px;color:var(--mut);font-size:.82rem;border-top:1px solid var(--line)}
+@media (max-width:640px){.filtros{grid-template-columns:1fr 1fr;padding:12px 14px}.det{grid-template-columns:1fr}.stats{gap:8px}.hero{padding:20px 14px}.controls,main{padding:0 14px}.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}}
